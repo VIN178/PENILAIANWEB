@@ -1,0 +1,65 @@
+.navbar {
+    background: linear-gradient(red 0%,#ffffff 40%);
+}
+footer {
+    background: linear-gradient(#a901f7 0%,#0a0a0a 40%,#f005bd 100%);
+}
+
+.level-pelatihan {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.level-pelatihan h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.level-container {
+    display: flex;
+    justify-content: space-between; /* Memastikan elemen berada di posisi kiri, tengah, dan kanan */
+    align-items: flex-start; /* Menjaga elemen sejajar di bagian atas */
+    width: 80%; /* Mengatur lebar kontainer */
+    margin: 0 auto; /* Agar kontainer berada di tengah halaman */
+    position: relative;
+}
+
+.level-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 150px; /* Tentukan lebar yang sesuai untuk setiap elemen */
+}
+
+.circle {
+    background-color: #f80707;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.level-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Garis panjang yang menghubungkan semua level */
+.level-container::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Mulai dari sisi kiri kontainer */
+    top: 40px; /* Menyesuaikan posisi vertikal garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: #f7ab09;
+    width: calc(100% - 20px); /* Menghubungkan dari 1 ke 3 */
+    z-index: -1; /* Garis berada di belakang elemen */
+}
